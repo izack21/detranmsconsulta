@@ -26,5 +26,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Cypress run
+      - name: CI Exemplo
         uses: cypress-io/github-action@v6
