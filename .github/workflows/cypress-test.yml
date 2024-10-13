@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Give executable permission to Cypress
-        run: chmod +x node_modules/.bin/cypress
+
 
       - name: Checkout code
         uses: actions/checkout@v3
@@ -27,7 +26,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Cypress tests
-        run: npx cypress run
-        env:
-          CI: true
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
